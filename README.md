@@ -40,13 +40,13 @@ No description here, lots out there on how to install.  Staying focused on kuber
 
 To make life easy it's a good idea to create a virtual machine that you will use as a 
 template for others, then you only have to configure one with all the software etc.  
-Then just clone it each time.
+After that just clone it each time.
 
-I never like to reinvent the wheel, so first check the WWW.  
+I never like to reinvent the wheel, so first check the Web.  
 In this case, Stackoverflow (my favourite site), has an interesting entry:- 
 [how can i create ubuntu based docker host by using docker machine with virtualbo](https://stackoverflow.com/questions/33935800/how-can-i-create-ubuntu-based-docker-host-by-using-docker-machine-with-virtualbo)
 
-Do not want docker-machine part, it might get in the way of kubernetes.  Therefore only follow steps 1 to 18. They are reproduced below.
+Do not need docker-machine part, anyhow it might get in the way of kubernetes.  Therefore only follow steps 1 to 18. They are reproduced below.
 
 1. Get Ubuntu Server ISO
 2. Create a machine in VirtualBox. I called mine "Ubuntu template" because I want to learn Swarm locally, so I want a machine that I'll be able to duplicate and get subsequent machines quickly after the longer initial setup.
@@ -68,9 +68,9 @@ Do not want docker-machine part, it might get in the way of kubernetes.  Therefo
 16. In VirtualBox, clone the template machine (check the checkbox to reinitialize MAC address). I named mine kube01
 17. Start the new virtual machine and run echo 'kube01' > /etc/hostname and then reboot.
     Repeat 16 & 17 and name the machine kube02
-18. Log in to each machind and run ```ifconfig``` to find out the IP addresses of the cloned machines.
+18. Log in to each machine and run ```ifconfig``` to find out the IP addresses of the cloned machines.
 
-The commands after this do not apply for this research. (I have made changes to the original)
+The commands after this do not apply for this research.
 
 ## Install Kubernetes (k8s)
 
@@ -78,10 +78,16 @@ The web has an excellent article for installing k8s on Ubuntu 18.
 
 [How to Install Kubernetes on Ubuntu 18](https://geekflare.com/install-kubernetes-on-ubuntu)
 
+
+At this stage you will have two virtual machines (VM's).  **kube01** the master and **kube02** the slave.
+
+
+
+
  
+WIP - More to come...
 
 
 
 
-
-#### Last updated Mon 17 Feb 21:41:51 GMT 2020
+#### Last updated Tue 18 Feb 19:21:17 GMT 2020
